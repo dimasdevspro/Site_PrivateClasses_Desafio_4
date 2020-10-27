@@ -1,0 +1,27 @@
+{
+  "name": "Site_Aulas_Particulares_Desafio_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimasdevspro/Site_Portifolio_Desafio_3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimasdevspro/Site_Portifolio_Desafio_3/issues"
+  },
+  "homepage": "https://github.com/dimasdevspro/Site_Portifolio_Desafio_3#readme"
+}
