@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.linkedin/in/dimas-apereira",
+      "name": "Dimas Alves Pereira",
+      "birth": 327888000000,
+      "degreesOfEducation": "Ensino Superior Completo",
+      "classes": "D",
+      "subjects": "JavaScript, HTML, CSS",
+      "created_at": 1603917317158
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://www.linkedin/in/asns-apereira",
+      "name": "Sara",
+      "birth": 477683200000,
+      "degreesOfEducation": "Ensino Superior Completo",
+      "classes": "P",
+      "subjects": "HTML, CSS, Node.js",
+      "created_at": 1603921493349
+    }
+  ]
+}

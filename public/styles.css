@@ -16,6 +16,8 @@
 body {
   background: var(--color-morningsky);
   font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  
 }
 
 header {
@@ -33,7 +35,7 @@ header {
 }
 
 .links {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 .links a + a {
@@ -69,4 +71,135 @@ color: var(--color-honey);
 .links a:hover::after {
   width: 100%;
   transition: width 600ms ease-in-out 200ms;
+}
+
+/*==================CARD===================*/
+
+.card {
+  width: 800px;
+  min-height: 400px;
+  margin: 45px auto;
+  background-color: var(--color-cerulean);
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  box-shadow: 20px 40px 20px 20px rgba(0, 0, 0, 0.2);
+  animation: up 200ms ease-out;
+  
+}
+
+@keyframes up {
+  from {
+opacity: 0;
+transform: translateY(15px)
+  }
+ to {
+opacity: 1;
+
+}
+}
+.avatar {
+  width: 320px; 
+  min-height: 600px; 
+  background: url(https://source.unsplash.com/collection/4852103/900x900) center center no-repeat;
+}
+
+/*=========================DETAIS=========================*/
+
+.details {
+  padding: 15px;
+
+}
+
+.details .item {
+  border-bottom: 1px solid #033949;
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border: none;
+}
+
+.details .item div:nth-child(1), 
+p{
+  color: var(--color-mist);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.details .item div:nth-child(2){
+  color: var(--color-morningsky);
+  font-size: 20px;
+  line-height:21px
+}
+
+.details p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.item span {
+  padding: 8px 16px;
+  color: var(--color-mist);
+  background-color: var(--color-morningsky);
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 4px;
+  display: inline-block;
+  margin-top: 8px;
+  
+}
+
+/* FORM */
+
+input {
+  width: 100%;
+  outline: none;
+  color: var(--color-cerulean);
+  font-size: 20px;
+  line-height:21px
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 5px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-cerulean);
+}
+
+button[type="submit"], 
+a.button {
+  padding: 8px 32px;
+  background-color: var(--color-cerulean);
+  border: 2px solid var(--color-mist);
+  border-radius: 4px;
+  margin-top: 16px;
+  width: 100%;
+  color: var(--color-mist);
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
+
+button[type="submit"]:hover,
+a.button:hover {
+  border: 3px solid var(--color-mist);
+  box-shadow: 1px 2px 3px 4px;
+  background-color: var(--color-honey);
+  color: var(--color-cerulean);
+}
+
+input::placeholder:hover {
+  border: var(--color-honey)
 }
