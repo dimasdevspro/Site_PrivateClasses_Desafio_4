@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { age } = require('./utils')
+const { age, date, graduation } = require('./utils')
+
 // exportar mostrar
 
 exports.show = function(req, res) {
@@ -18,12 +19,13 @@ const teacher = {
     age: age(foundTeachers.birth),
     subjects: foundTeachers.subjects.split(","),
     created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeachers.created_at),
+    graduation: graduation(foundTeachers.graduation),
 }
 
      return res.render("teachers/show", {teacher})
 }
 
-// exportar post
+// exportar criar
 
 exports.post = function (req, res){
 
@@ -34,7 +36,7 @@ exports.post = function (req, res){
            return res.send('Please, fill all fields!')
         }
 
-let {avatar_url, name, birth, degreesOfEducation, classes, subjects} = req.body
+let {avatar_url, name, birth, graduation, classes, subjects} = req.body
 
 birth = Date.parse(req.body.birth)
 const created_at = Date.now()
@@ -47,7 +49,7 @@ data.teachers.push({
     avatar_url,
     name,
     birth,
-    degreesOfEducation,
+    graduation,
     classes,
     subjects,
     created_at   
@@ -61,3 +63,26 @@ fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err){
 
     // return res.send(req.body)
 }
+
+
+// exportar Editar
+
+exports.edit = function (req, res) {
+    const { id } = req.params
+
+     const foundTeachers = data.teachers.find(function(teachers){
+         return teachers.id == id
+     })
+
+     if(!foundTeachers) return res.send("Teacher not found!")
+
+     const teacher = {
+         ...foundTeachers,
+         birth: date(foundTeachers.birth),
+         graduation: graduation(foundTeachers.graduation)
+     }
+
+
+    return res.render('teachers/edit', {teacher})
+}
+

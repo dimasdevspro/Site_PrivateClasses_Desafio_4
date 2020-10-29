@@ -5,7 +5,7 @@
       "avatar_url": "http://www.linkedin/in/dimas-apereira",
       "name": "Dimas Alves Pereira",
       "birth": 327888000000,
-      "degreesOfEducation": "Ensino Superior Completo",
+      "graduation": "medio",
       "classes": "D",
       "subjects": "JavaScript, HTML, CSS",
       "created_at": 1603917317158
@@ -15,10 +15,20 @@
       "avatar_url": "http://www.linkedin/in/asns-apereira",
       "name": "Sara",
       "birth": 477683200000,
-      "degreesOfEducation": "Ensino Superior Completo",
+      "graduation": "superior",
       "classes": "P",
       "subjects": "HTML, CSS, Node.js",
       "created_at": 1603921493349
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://www.linkedin/in/asns-apereira",
+      "name": "Sara",
+      "birth": 477619200000,
+      "graduation": "superior",
+      "classes": "P",
+      "subjects": "HTML, CSS, Node.js",
+      "created_at": 1604000122039
     }
   ]
 }

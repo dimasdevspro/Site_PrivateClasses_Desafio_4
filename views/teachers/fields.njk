@@ -3,7 +3,8 @@
            <input 
            type="url"
            name="avatar_url"
-           placeholder="http://">
+           placeholder="http://"
+           value="{{ teacher.avatar_url}}">
        </div>
 
        <div class="item">
@@ -12,6 +13,7 @@
            type="text"
            name="name"
            placeholder="Nome do Professor"
+           value="{{ teacher.name }}"
            >
        </div>
 
@@ -20,18 +22,28 @@
            <div>
                <input 
                type="date" 
-               name="birth">
+               name="birth"
+               value="{{ teacher.birth}}"
+               >
             </div>
        </div>
 
        <div class="item">
            <div>Grau de Escolaridade</div>
            <div>
-               <select name="degreesOfEducation">
-                <option value="Ensino Médio Completo">Ensino Médio Completo</option>
-                <option value="Ensino Superior Completo">Ensino Superior Completo</option>
-                <option value="Mestrado">Mestrado</option>
-                <option value="Doutorado">Doutorado</option>
+               <select name="graduation">
+                <option value="medio" {% if teacher.graduation == "Ensino Médio Completo" %}
+           selected
+           {% endif %}  >Ensino Médio Completo</option>
+                <option value="superior" {% if teacher.graduation == "Ensino Superior Completo" %}
+           selected
+           {% endif %}  >Ensino Superior Completo</option>
+                <option value="mestre" {% if teacher.graduation == "Mestrado" %}
+           selected
+           {% endif %}  >Mestrado</option>
+                <option value="doutor" {% if teacher.graduation == "Doutorado" %}
+           selected
+           {% endif %}  >Doutorado</option>
                 </select>
            </div>
        </div>
@@ -41,11 +53,15 @@
            <span><input 
            type="radio" 
            name="classes"
-           value="P" checked>Presencial</span>
+           value="P" {% if teacher.classes == "P" %}
+           checked
+           {% endif %}>Presencial</span>
            <span><input 
            type="radio" 
            name="classes"
-           value="D">À distância</span>
+           value="D" {% if teacher.classes == "D" %}
+           checked
+           {% endif %}>À distância</span>
        </div>
 
        <div class="item">
@@ -54,7 +70,8 @@
                <input 
                type="text" 
                name="subjects"
-               placeholder="Digite aqui as disciplinas e separe com vírgulas.">
+               placeholder="Digite aqui as disciplinas e separe com vírgulas."
+               value="{{ teacher.subjects }}">
            </div>
        </div>
 
