@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.2"
   },
@@ -16,7 +17,6 @@
     "start": "npm-run-all -p nodemon browser-sync",
     "nodemon": "nodemon server.js",
     "browser-sync": "browser-sync start --proxy http://localhost:3332 --files 'public,views'"
-  
   },
   "repository": {
     "type": "git",

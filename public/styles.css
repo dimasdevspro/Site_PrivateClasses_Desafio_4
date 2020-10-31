@@ -99,8 +99,7 @@ opacity: 1;
 }
 .avatar {
   width: 320px; 
-  min-height: 600px; 
-  background: url(https://source.unsplash.com/collection/4852103/900x900) center center no-repeat;
+
 }
 
 /*=========================DETAIS=========================*/
@@ -152,7 +151,8 @@ p{
 
 /* FORM */
 
-input {
+input,
+select {
   width: 100%;
   outline: none;
   color: var(--color-cerulean);
@@ -171,7 +171,8 @@ input::placeholder {
   color: var(--color-cerulean);
 }
 
-button[type="submit"], 
+#form-update,
+#form-delete, 
 a.button {
   padding: 8px 32px;
   background-color: var(--color-cerulean);
@@ -192,7 +193,7 @@ a.button {
   text-decoration: none;
 }
 
-button[type="submit"]:hover,
+#form-update:hover,
 a.button:hover {
   border: 3px solid var(--color-mist);
   box-shadow: 1px 2px 3px 4px;
@@ -202,4 +203,85 @@ a.button:hover {
 
 input::placeholder:hover {
   border: var(--color-honey)
+}
+
+#form-delete {
+  margin-top: 8px;
+
+}
+
+#form-delete:hover {
+  border: 3px solid red;
+  box-shadow: 1px 2px 3px 4px;
+  background-color: lightcoral;
+  color: var(--color-cerulean);
+}
+
+/*============= INDEX INSTRUCTONS ==============*/
+
+.table-container {
+  display: block;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.table-container table {
+  border-spacing: 0;
+}
+
+.table-container thead tr th{
+  text-align: left;
+
+}
+
+td, th {
+  padding: 16px;
+  border-bottom: 1px solid #0c3642;
+  color: var(--color-mist);
+}
+
+th {
+  text-transform: uppercase;
+  color: var(--color-morningsky);
+  font-size: 14px;
+}
+tbody tr:last-child td{
+  border-bottom: none;
+}
+
+tbody tr td:first-child {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+}
+
+tbody tr td:first-child span {
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 3px 1px 6px -4px black;
+  border: 2px solid white;
+}
+
+tbody tr td:last-child a,
+.table-container a {
+  background-color: var(--color-honey);
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.table-c0ntainer thead tr th:last-child, 
+td:last-child {
+  text-align: center;
+}
+
+.table-container a {
+  margin-bottom: 16px;
+  display: inline-block;
 }
