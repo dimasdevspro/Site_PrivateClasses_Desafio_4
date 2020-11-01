@@ -49,11 +49,11 @@ let {avatar_url, name, birth, graduation, classes, subjects} = req.body
 birth = Date.parse(req.body.birth)
 const created_at = Date.now()
 
-let id=1
-const lastTeacher = data.teachers[data.teachers.length - 1 ]
+let id = 1  
+const lastId = data.teachers[data.teachers.length - 1 ].id
 
-if(!lastTeacher) {
-    id = lastTeacher.id + 1
+if(lastId) {
+    id = lastId + 1
 }
 
 data.teachers.push({

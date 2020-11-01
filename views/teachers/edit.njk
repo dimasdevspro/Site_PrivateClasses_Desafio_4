@@ -15,13 +15,26 @@
                 name="id" 
                 value="{{teacher.id}}">
             </form>
-            <form  action="/teachers?_method=DELETE" method="post">
+            <form  id="form-delete" action="/teachers?_method=DELETE" method="post">
                 <input 
                 type="hidden" 
                 name="id" 
                 value="{{teacher.id}}">
-                <button id="form-delete"  type="submit">Deletar</button>
+                <button id="button-delete"  type="submit">Deletar</button>
             </form>
+
+            <script>
+
+                const formDelete = document.querySelector("#form-delete");
+                formDelete.addEventListener("submit", function (event) {
+                    const confirmation = confirm("Deseja Deletar?")
+                    if (!confirmation) {
+                        event.preventDefault();
+                    }
+                })
+                
+            </script>
+
         </section>
     </div>
 {% endblock %}

@@ -171,8 +171,8 @@ input::placeholder {
   color: var(--color-cerulean);
 }
 
-#form-update,
-#form-delete, 
+#button-update,
+#button-delete, 
 a.button {
   padding: 8px 32px;
   background-color: var(--color-cerulean);
@@ -193,7 +193,7 @@ a.button {
   text-decoration: none;
 }
 
-#form-update:hover,
+#button-update:hover,
 a.button:hover {
   border: 3px solid var(--color-mist);
   box-shadow: 1px 2px 3px 4px;
@@ -205,12 +205,12 @@ input::placeholder:hover {
   border: var(--color-honey)
 }
 
-#form-delete {
+#button-delete {
   margin-top: 8px;
 
 }
 
-#form-delete:hover {
+#button-delete:hover {
   border: 3px solid red;
   box-shadow: 1px 2px 3px 4px;
   background-color: lightcoral;

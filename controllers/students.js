@@ -33,10 +33,10 @@ exports.post = function (req, res){
 birth = Date.parse(req.body.birth)
 
 let id = 1  
-const lastStudent = data.students[data.students.length - 1 ]
+const lastId = data.students[data.students.length - 1 ].id
 
-if(!lastStudent) {
-    id = lastStudent + 1
+if(lastId) {
+    id = lastId + 1
 }
 
 data.students.push({

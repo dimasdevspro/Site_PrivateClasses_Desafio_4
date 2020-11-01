@@ -18,7 +18,17 @@
              <td><span style="background-image: url({{student.avatar_url}})"></span>
                  {{student.name}}</td>
              <td>{{student.email}}</td>
-             <td>{{student.graduation}}</td>
+             <td>
+                 {% if student.graduation == "ef5" %}"5º Ano do Ensino Fundamental" {% endif %}
+                 {% if student.graduation == "ef6" %}"6º Ano do Ensino Fundamental" {% endif %}
+                 {% if student.graduation == "ef7" %}"7º Ano do Ensino Fundamental" {% endif %}
+                 {% if student.graduation == "ef8" %}"8º Ano do Ensino Fundamental" {% endif %}
+                 {% if student.graduation == "ef9" %}"9º Ano do Ensino Fundamental" {% endif %}
+                 {% if student.graduation == "em1" %}1º Ano do Ensino Médio" {% endif %}
+                 {% if student.graduation == "em2" %}2º Ano do Ensino Médio" {% endif %}
+                 {% if student.graduation == "em3" %}3º Ano do Ensino Médio" {% endif %}
+
+                 </td>
              <td><a href="/students/{{student.id}}">ver</a></td>
         {% endfor %}
          </tr>

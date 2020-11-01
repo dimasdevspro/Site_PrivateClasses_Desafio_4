@@ -1,4 +1,4 @@
-<h1 align="center"><img src="assets/Portifolio_renderizado_para_njk.gif" height="150" weigth="150"></h1>
+<h1 align="center"><img src="assets/privateclassesbanner.png" height="150" weigth="150"></h1>
 
 <p align="center"><img src="https://img.shields.io/badge/<HTML>-<green>"> <img src="https://img.shields.io/badge/<CSS>-<green>"> <img src="https://img.shields.io/badge/<Javascript>-<green>"> <img src="https://img.shields.io/badge/<NodeJs>-<green>"> <img src="https://img.shields.io/badge/<Nunjucks>-<green>"></p> 
 
@@ -17,63 +17,66 @@
 * [Licença](#licença)
 <!--te-->
 
-### Sobre
+### Sobre [↩](#indice)
 
-<p align="center">Página Dinâmica - Portfólio - em Nunjucks. Relativos aos desafios do Bootcamp da Rocketseat: </p>
+<p>Site para Administração de Alunos e Professores. Desafios propostos pela Rocketseat no Bootcamp Launchbase:</p>
 <ul >
- <li><a href="https://github.com/rocketseat-education/bootcamp-launchbase-desafios-03/blob/master/desafios/03-1-primeiro-servidor.md" target="_blank">Desafio 3.1;</a></li>
+ <li><a href="https://github.com/rocketseat-education/bootcamp-launchbase-desafios-04/tree/master/desafios" target="_blank">Desafio Aulas Particulares;</a></li>
 </ul>
 <p>Detalhes do Projeto:</p>
 <ul>
- <li>Criação de servidor (server.js);</li>
- <li>Importando e Acoplando o Front-end ao servidor (html, css, javascript);</li>
- <li>Atualização de modal./<li>
+ <li>Criação de Front-End e Back-End;</li>
+ <li>Dinamismo do código com template Nunjucks - upgrade;</li>
+ <li>Desenvolvimento de CRUD (Create - Cadastro de Novos dados; Read - Apresentação dos Cadastros; Update - Atualizaçaõ do Cadastro e; Delete - Exclusão de Cadastro.</li>
+ <li>Introdução a Responsividade - Menu</li>
 </ul>
 
 
-### Status do Projeto
+### Status do Projeto [↩](#indice)
 
 <h4> 
-	🚧 Em construção... 🚧
+	👌 Concluído 👌
 </h4>
 
 
-### Features
-
-- [x] Página com menu
-- [x] Página Sobre
-- [x] Página com conteúdo
-
-
-### Demonstração da Aplicação
-
-<h4> 
-	🚧 Em construção... 🚧
-</h4>
+### Features [↩](#indice)
+- [x] Página com menu - Teachers and Students
+- [x] Página Teachers - Cadastro, edição e exclusão
+- [x] Página Students - Cadastro, edição e exclusão
 
 
-### Pré-requisitos
+### Demonstração da Aplicação [↩](#indice)
 
-Para começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+<h1 align="center"><img src="screenshots/UsandoPrivateClasses.gif" height="350" weigth="350"></h1>
+
+
+### Pré-requisitos [↩](#indice)
+
+Para começar, você vai precisar instalar em sua máquina as seguintes ferramentas:
 
 - Um repositório para seu projeto [Git](https://git-scm.com);
 
 - Um editor de código [VSCode](https://code.visualstudio.com/);
 
-- O motor V8 Javascript do Chrome, versão LTS [NodeJS](https://nodejs.org/en/download/); 
+- O motor V8 Javascript do Chrome, versão LTS [NodeJS](https://nodejs.org/en/download/); );
 
 
-### Testes 
+### Testes [↩](#indice)
+
 
 ```bash
+# Baixe o editor equivalente para a sua plataforma
+$ <https://code.visualstudio.com/>
+
+# Vá para a pasta de downloads e execute o arquivo
 
 # Acesse o terminal/cmd de sua plataforma (Win, Linux, etc)
 
 # Clone este repositório com o seguinte comando abaixo
-$ git clone <https://github.com/dimasdevspro/Site_Portifolio_Desafio_3>
+$ git clone <https://github.com/Site_PrivateClasses_Desafio_4/>
 
 # Ainda no terminal, acesse a pasta com mais um comando
-$ cd Site_Portifolio_Desafio_3
+$ cd Site_PrivateClasses_Desafio_4
 
 # Agora digite este comando, para editar/testas o projeto
 $ code .
@@ -81,16 +84,16 @@ $ code .
 ```
 
 
-### Instalação de Dependências
+### Instalação de Dependências [↩](#indice)
 
-Instalação de Dependências "Express", "Nodemon" e "Nunjucks" para rodar aplicação.
+Instalação de Dependências "Express", "Nodemon", "Nunjucks", "Browsersync" e "MethodOverride" para rodar aplicação.
 
 ```bash
 # Abra o terminal do VSCode na Aba "Terminal"
 $ "New Terminal"
 
 # Certifique-se que o terminal está com o caminho de sua pasta, i.e
-$ /Site_Portifolio_Desafio_3/
+$ /Site_PrivateClasses_Desafio_4/
 
 # Digite o comando no terminal para instalar o Express
 $ npm install express
@@ -98,21 +101,21 @@ $ npm install express
 # Digite o comando no terminal para instalar o "Nodemon"
 $ npm install -D nodemon
 
-# No arquivo "package.json", localize e modifique a linha "start": node server.js para:
-$ "start": nodemon server.js
-
-# Digite o comando abaixo para instalar o "Nunjucks"
+# Digite o comando no terminal para instalar o "Nunjucks"
 $ npm install nunjucks
+
+# Digite o comando no terminal para instalar o "Nunjucks"
+$ npm install method-override
+
+# Digite o comando no terminal para instalar o "Browsersync"
+$ npm install browser-sync npm-run-all
 
 # Digite no terminal o seguinte comando para rodar o servidor
 $ npm start
 
-# Para rodar a aplicação no browser, digite
-$ http://localhost:3000/
-
 ```
 
-### Tecnologias utilizadas
+### Tecnologias utilizadas [↩](#indice)
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -121,7 +124,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [NodeJS](https://nodejs.org/en/download/).
 
 
-### Autor
+### Autor [↩](#indice)
 
 ---
 
@@ -137,6 +140,6 @@ Feito com ❤️ por Dimas 👋🏽 Entre em contato!
 [![Gmail Badge](https://img.shields.io/badge/-dimasdevspro@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:dimasdevspro@gmail.com)](mailto:dimasdevspro@gmail.com)
 
 
-### Licença
+### Licença [↩](#indice)
 
 <img alt="APM" src="https://img.shields.io/apm/l/vim-mode">

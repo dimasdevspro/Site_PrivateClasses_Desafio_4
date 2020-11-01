@@ -2,37 +2,30 @@
 
 {% block content %}
     <div class="card">
-        <section class="avatar" style="background: url({{student.avatar_url}}) center center no-repeat">
-        </section>
+        <section class="avatar" style="background: url({{student.avatar_url}}) center center no-repeat"></section>
         <section class="details">
             <form method="post" action="/students?_method=PUT">
                 <p>Editar Aluno</p>
 
                 {% include 'students/fields.njk'%}
-                
-                <input 
-                type="hidden" 
-                name="id" 
-                value="{{student.id}}">
-            </form>
-            <form  action="/students?_method=DELETE" method="post">
-                <input 
-                type="hidden" 
-                name="id" 
-                value="{{student.id}}">
-                <button id="form-delete"  type="submit">Deletar</button>
-            </form>
 
+                <input type="hidden" name="id" value="{{student.id}}">
+            </form>
+            <form id="form-delete" action="/students?_method=DELETE" method="post">
+                <input type="hidden" name="id" value="{{student.id}}">
+                <button id="button-delete" type="submit">Deletar</button>
+            </form>
             <script>
-                const formDelete = document.querySelector("#form-delete")
-                formDelete.addEventListener("submit", function(event){
-                    const confirmation = confirm("Deseja Deletar?") {
-                    if(!confirmation) {
-                        event.preventDefault()
-                }
-                })
-            </script>
 
+                const formDelete = document.querySelector("#form-delete");
+                formDelete.addEventListener("submit", function (event) {
+                    const confirmation = confirm("Deseja Deletar?")
+                    if (!confirmation) {
+                        event.preventDefault();
+                    }
+                })
+                
+            </script>
         </section>
     </div>
 {% endblock %}
