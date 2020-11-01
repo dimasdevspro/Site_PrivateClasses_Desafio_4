@@ -4,7 +4,6 @@
 
 ### Indice
 <!--ts-->
-* [Indice](#indice)
 * [Sobre](#sobre)
 * [Status do Projeto](#status-do-projeto)
 * [Features](#features)
@@ -109,6 +108,13 @@ $ npm install method-override
 
 # Digite o comando no terminal para instalar o "Browsersync"
 $ npm install browser-sync npm-run-all
+
+# Certifique que no arquivo package.json, na linha "scripts" esteve descrito:
+"scripts": {
+    "start": "npm-run-all -p nodemon browser-sync",
+    "nodemon": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy http://localhost:3332 --files 'public,views'"
+  },
 
 # Digite no terminal o seguinte comando para rodar o servidor
 $ npm start
