@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "npm-run-all -p nodemon browser-sync",
-    "nodemon": "nodemon src/server.js",
-    "browser-sync": "browser-sync start --proxy http://localhost:3332 --files 'public,src/app/views'"
+    "nodemon": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy http://localhost:3332 --files 'public,views'"
   },
   "repository": {
     "type": "git",
